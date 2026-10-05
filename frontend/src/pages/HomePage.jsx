@@ -120,7 +120,14 @@ export default function HomePage() {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <section className="relative overflow-hidden rounded-2xl bg-slate-900 px-6 py-10 text-white sm:px-12 sm:py-16">
+      <section 
+        className="relative overflow-hidden rounded-2xl bg-slate-900 px-6 py-10 text-white sm:px-12 sm:py-16"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url("https://images.unsplash.com/photo-1547573854-74d2a71d0826?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         <div className="relative z-10 mx-auto max-w-3xl text-center sm:text-left">
           <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl">
             What's on your plate today?

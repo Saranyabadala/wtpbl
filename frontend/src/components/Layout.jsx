@@ -146,6 +146,81 @@ export default function Layout({ children }) {
       <main className="mx-auto w-full max-w-7xl flex-1 px-4 py-6 pb-24 sm:px-6 lg:px-8 sm:pb-8">
         {children}
       </main>
+
+      {/* Footer */}
+      <footer className="bg-[#111] text-white pt-16 pb-28 sm:pb-16 border-t border-slate-800 mt-auto">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-12">
+            <div>
+              <h3 className="text-lg font-bold mb-4 tracking-tight">About HealthPlate</h3>
+              <ul className="space-y-3 text-sm text-gray-400">
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">HealthPlate</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">About Us</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Our Mission</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Contact Us</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Careers</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4 tracking-tight">For Users</h3>
+              <ul className="space-y-3 text-sm text-gray-400">
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Explore Restaurants</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Healthy Dishes</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Health Filters</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">My Orders</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Help & Support</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4 tracking-tight">For Restaurants</h3>
+              <ul className="space-y-3 text-sm text-gray-400">
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Partner With Us</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Restaurant Dashboard</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">List Your Restaurant</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Restaurant Support</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4 tracking-tight">Learn More</h3>
+              <ul className="space-y-3 text-sm text-gray-400">
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Privacy Policy</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Terms of Service</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Cookie Policy</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">FAQs</Link></li>
+                <li><Link to="/" className="hover:text-brand-500 transition-colors">Blog</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-bold mb-4 tracking-tight">Social Links</h3>
+              <ul className="space-y-3 text-sm text-gray-400 mb-6">
+                <li><a href="#" className="hover:text-brand-500 transition-colors">Instagram</a></li>
+                <li><a href="#" className="hover:text-brand-500 transition-colors">LinkedIn</a></li>
+                <li><a href="#" className="hover:text-brand-500 transition-colors">YouTube</a></li>
+                <li><a href="#" className="hover:text-brand-500 transition-colors">X/Twitter</a></li>
+                <li><a href="#" className="hover:text-brand-500 transition-colors">Facebook</a></li>
+              </ul>
+              <div className="flex flex-col gap-3">
+                <button className="bg-black border border-gray-700 hover:border-brand-500 rounded-lg px-4 py-2 flex items-center gap-2 transition-colors">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.14 1.36-.37 2.45-1.12 3.22-.73.8-1.92 1.43-3 1.36-.17-1.32.48-2.29 1.18-3.08z"/></svg>
+                  <div className="text-left"><div className="text-[10px] leading-none text-gray-400">Download on the</div><div className="text-sm font-semibold leading-none">App Store</div></div>
+                </button>
+                <button className="bg-black border border-gray-700 hover:border-brand-500 rounded-lg px-4 py-2 flex items-center gap-2 transition-colors">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M20.2 12.7L5.5 21.6c-.6.4-1.5 0-1.5-.7V3.1c0-.7.9-1.1 1.5-.7l14.7 8.9c.5.3.5 1.1 0 1.4zM5.5 4.3v15.4L18.1 12 5.5 4.3z"/></svg>
+                  <div className="text-left"><div className="text-[10px] leading-none text-gray-400">GET IT ON</div><div className="text-sm font-semibold leading-none">Google Play</div></div>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-gray-800 pt-8 mt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <p className="text-sm text-gray-500 shrink-0">
+              © 2026 HealthPlate. All rights reserved.
+            </p>
+            <p className="text-xs text-gray-500 sm:text-right max-w-xl">
+              HealthPlate helps users discover food based on dietary preferences and health-related filters. Always verify ingredients and nutritional information with the restaurant.
+            </p>
+          </div>
+        </div>
+      </footer>
       
       <FloatingCart />
 
