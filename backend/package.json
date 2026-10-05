@@ -11,6 +11,8 @@
     "dev:seed": "node scripts/dev.js",
     "seed": "node scripts/seed.js",
     "seed:fresh": "node scripts/seed.js --drop",
+    "seed:images": "node scripts/enrichImages.js",
+    "update:restaurant-images": "node scripts/updateRestaurantImages.js",
     "smoke": "node scripts/smoke.js",
     "verify": "node scripts/verifyLive.js"
   },

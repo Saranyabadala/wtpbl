@@ -13,6 +13,10 @@ const DishSchema = new Schema(
       index: true,
     },
     description: { type: String, trim: true, default: '' },
+    image_query: { type: String, trim: true, default: '' },
+    image_url: { type: String, trim: true, default: null },
+    image_author: { type: String, trim: true, default: null },
+    image_author_url: { type: String, trim: true, default: null },
     health_tags: {
       type: [{ type: String, enum: HEALTH_TAGS }],
       default: [],

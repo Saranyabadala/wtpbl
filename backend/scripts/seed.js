@@ -87,6 +87,7 @@ export async function seedDatabase({ drop = false, quiet = false } = {}) {
           rating: entry.rating,
           google_place_id: null,
           source: 'seed',
+          image_query: `${entry.cuisine} Indian restaurant food`,
         },
       },
       { upsert: true, new: true, setDefaultsOnInsert: true }
@@ -106,6 +107,7 @@ export async function seedDatabase({ drop = false, quiet = false } = {}) {
             restaurant_id: restaurant._id,
             name: dish.name,
             description: dish.tip,
+            image_query: `${dish.name} Indian food`,
             health_tags: tags,
             allergens,
             community_votes: votes,

@@ -82,6 +82,7 @@ export default function RestaurantPage() {
             <img
               src={restaurant.image_url || `https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=1200&h=400`}
               alt={restaurant.name}
+              onError={(e) => { e.target.onerror = null; e.target.src = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=1200&h=400'; }}
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -209,7 +210,12 @@ export default function RestaurantPage() {
                 </div>
               </div>
               <div className="relative w-1/3 shrink-0 bg-slate-100">
-                <img src={`https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&h=400`} alt={dish.name} className="h-full w-full object-cover" />
+                <img 
+                  src={dish.image_url || `https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&h=400`} 
+                  alt={dish.name} 
+                  onError={(e) => { e.target.onerror = null; e.target.src = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400&h=400'; }}
+                  className="h-full w-full object-cover" 
+                />
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 w-[90%] flex justify-center">
                    {/* Add to cart could also go here for the traditional swiggy style, but we placed it above */}
                 </div>

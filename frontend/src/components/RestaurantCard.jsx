@@ -40,7 +40,8 @@ function DishPreviewRow({ dish }) {
 
 export default function RestaurantCard({ restaurant, className = '' }) {
   // Use a placeholder image if none exists
-  const imageUrl = restaurant.image_url || `https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800&h=600`;
+  const fallbackUrl = 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800&h=600';
+  const imageUrl = restaurant.image_url || fallbackUrl;
 
   return (
     <Link
@@ -51,6 +52,7 @@ export default function RestaurantCard({ restaurant, className = '' }) {
         <img
           src={imageUrl}
           alt={restaurant.name}
+          onError={(e) => { e.target.onerror = null; e.target.src = fallbackUrl; }}
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         {/* Gradient Overlay for text readability if we were to add text on image, Swiggy uses a dark gradient at the bottom for offers */}

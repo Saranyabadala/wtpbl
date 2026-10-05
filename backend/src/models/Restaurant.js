@@ -29,6 +29,10 @@ const RestaurantSchema = new Schema(
       default: null,
       index: { sparse: true },
     },
+    image_query: { type: String, trim: true, default: '' },
+    image_url: { type: String, trim: true, default: null },
+    image_author: { type: String, trim: true, default: null },
+    image_author_url: { type: String, trim: true, default: null },
     rating: { type: Number, min: 0, max: 5, default: null },
     source: {
       type: String,
